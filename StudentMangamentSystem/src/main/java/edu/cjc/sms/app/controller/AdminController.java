@@ -40,6 +40,17 @@ public class AdminController {
 		return "adminscreen";
 	}
 	
+	@RequestMapping("/search")
+	public String searchstudent(@RequestParam("batchNumber")String batchNumber ,Model m) {
+		List<Student>result=ssi.findAllByBatchNumber(batchNumber);
+		if(result.size()>0) {
+			m.addAttribute("data", result);
+		}else {
+			m.addAttribute("data",ssi.getAllStudents());
+			m.addAttribute("message", "no record found " +batchNumber);
+		}
+		return "adminscreen";
+	}
 	
 	
 }

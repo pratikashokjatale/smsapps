@@ -157,7 +157,32 @@ form {
 			</div>
 		</section>
 		<section class="view" style="height: 530px" id="view">
-			<h1 class="text-center">Student Details..!</h1>
+			<h1 class="text-center">Student Details..!</h1><div class="text-center w-100"> 
+     <form action="search" class="w-100"> 
+      <select class="select form-control-sm border border-primary" 
+name="batchNumber"> 
+                    <option value="#" slected>Select Batch Number</option> 
+                    <option value="FDJ-160">FDJ-160</option> 
+                    <option value="REG-160">REG-160</option> 
+                    <option value="FDJ-161">FDJ-161</option> 
+                    <option value="REG-161">REG-162</option> 
+                    <option value="FDJ-162">FDJ-162</option> 
+                    <option value="REG-162">REG-162</option> 
+                    <option value="FDJ-163">FDJ-163</option> 
+                    <option value="REG-163">REG-163</option> 
+                    <option value="FDJ-164">FDJ-164</option> 
+                    <option value="REG-164">REG-164</option> 
+                    <option value="FDJ-165">FDJ-165</option> 
+                    <option value="REG-165">REG-165</option> 
+                  </select> 
+                <button class="btn btn-outline-primary mb-1">Search</button>                 
+           </form> 
+   <marquee> 
+        <h1 style="color: red;"> 
+           ${message } 
+        </h1> 
+   </marquee> 
+     </div>
 			<table class="table table-hover" style="font-size: small">
 				<thead>
 					<tr>
