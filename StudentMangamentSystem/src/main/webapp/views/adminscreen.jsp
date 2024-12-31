@@ -172,8 +172,8 @@ name="batchNumber">
                     <option value="REG-163">REG-163</option> 
                     <option value="FDJ-164">FDJ-164</option> 
                     <option value="REG-164">REG-164</option> 
-                    <option value="FDJ-165">FDJ-165</option> 
-                    <option value="REG-165">REG-165</option> 
+                    <option value="FDJ-165">FDJ-185</option> 
+                    <option value="REG-165">REG-185</option> 
                   </select> 
                 <button class="btn btn-outline-primary mb-1">Search</button>                 
            </form> 
@@ -213,9 +213,9 @@ name="batchNumber">
 							<td>
 								<div class="btn-group btn-group-sm" role="group"
 									aria-label="...">
-									<button class="btn btn-outline-success">PayFees</button>
+								<a href="#">	<button class="btn btn-outline-success">PayFees</button></a>
 									<button class="btn btn-outline-primary">ShiftBatch</button>
-									<button class="btn btn-outline-danger">Remove</button>
+									<a href="delete?studentId=${s.studentId}"><button class="btn btn-outline-danger">Remove</button></a>
 
 								</div>
 

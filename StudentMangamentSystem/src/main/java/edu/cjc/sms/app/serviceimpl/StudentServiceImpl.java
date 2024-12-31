@@ -32,5 +32,12 @@ public class StudentServiceImpl implements StudentServiceI{
 		return sr.findAllByBatchNumber(batchNumber);
 	}
 
+	@Override
+	public List<Student> deletestudent(int studentId) {
+		sr.deleteById(studentId);
+		List<Student>list=sr.findAll();
+		return list ;
+	}
+
 	
 }

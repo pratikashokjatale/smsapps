@@ -9,5 +9,6 @@ public interface StudentServiceI {
 	List<Student> addStudent(Student s);
 	List<Student> getAllStudents();
 	public List<Student> findAllByBatchNumber(String batchNumber);
+	List<Student> deletestudent(int studentId);
 
 }

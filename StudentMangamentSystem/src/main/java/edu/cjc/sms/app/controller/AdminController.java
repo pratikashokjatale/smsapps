@@ -53,4 +53,12 @@ public class AdminController {
 	}
 	
 	
+	@RequestMapping("/delete")
+	public String deletestudent(@RequestParam("studentId")int studentId ,Model m) {
+		List<Student>list=ssi.deletestudent(studentId);
+		m.addAttribute("data", list);
+		return "adminscreen";
+	}
+	
+	
 }
