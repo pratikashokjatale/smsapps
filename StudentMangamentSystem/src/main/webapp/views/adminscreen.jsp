@@ -167,7 +167,7 @@ name="batchNumber">
                     <option value="FDJ-161">FDJ-161</option> 
                     <option value="REG-161">REG-162</option> 
                     <option value="FDJ-162">FDJ-162</option> 
-                    <option value="REG-162">REG-162</option> 
+                    <option value="REG-162">REG-162</option> 	
                     <option value="FDJ-163">FDJ-163</option> 
                     <option value="REG-163">REG-163</option> 
                     <option value="FDJ-164">FDJ-164</option> 
@@ -213,8 +213,8 @@ name="batchNumber">
 							<td>
 								<div class="btn-group btn-group-sm" role="group"
 									aria-label="...">
-								<a href="#">	<button class="btn btn-outline-success">PayFees</button></a>
-									<button class="btn btn-outline-primary">ShiftBatch</button>
+								<a href="updatefess?studentId=${s.studentId}">	<button class="btn btn-outline-success">PayFees</button></a>
+								<a href="switch?studentId=${s.studentId}"	><button class="btn btn-outline-primary">ShiftBatch</button></a>
 									<a href="delete?studentId=${s.studentId}"><button class="btn btn-outline-danger">Remove</button></a>
 
 								</div>
@@ -227,6 +227,15 @@ name="batchNumber">
 				</tbody>
 
 			</table>
+			<nav aria-label="...">
+  <ul class="pagination pagination-lg">
+    <li class="page-item active" aria-current="page">
+      <span class="page-link">1</span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+  </ul>
+</nav>
 		</section>
 	</div>
 

@@ -61,4 +61,33 @@ public class AdminController {
 	}
 	
 	
+	@RequestMapping("/updatefess")
+	public String updateFess(@RequestParam("studentId")int id,Model m) {
+		Student s =ssi.updateStu(id);
+		m.addAttribute("st", s);
+		return "fess";
+	}
+	
+	@RequestMapping("/payfees")
+	public String payfess(@RequestParam("studentId")int studentId, @RequestParam("feesPaid")float feesPaid,Model m) {
+		List<Student>list=ssi.feespay(studentId,feesPaid);
+		m.addAttribute("data", list);
+		return "adminscreen";
+	}
+	
+	@RequestMapping("/switch")
+	public String shiftbatch(@RequestParam("studentId")int id,Model m) {
+		Student s =ssi.updateStu(id);
+		m.addAttribute("st", s);
+		return "shift";
+	}
+	
+	@RequestMapping("/changebatch")
+	public String changebatch(@RequestParam("studentId")int studentId, @RequestParam("batchNumber")String batchNumber,Model m) {
+		List<Student>list=ssi.changebatch(studentId,batchNumber);
+		m.addAttribute("data", list);
+		return "adminscreen";
+	}
+	
+	
 }

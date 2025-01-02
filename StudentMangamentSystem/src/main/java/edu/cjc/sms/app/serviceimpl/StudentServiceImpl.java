@@ -1,6 +1,7 @@
 package edu.cjc.sms.app.serviceimpl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,6 +38,41 @@ public class StudentServiceImpl implements StudentServiceI{
 		sr.deleteById(studentId);
 		List<Student>list=sr.findAll();
 		return list ;
+	}
+
+	@Override
+	public Student updateStu(int id) {
+		Optional<Student>list=sr.findById(id);
+		if(list.isPresent()) {
+			Student p=list.get();
+			return p ;
+		}else
+		return null;
+	}
+
+	@Override
+	public List<Student> feespay(int studentId, float feesPaid) {
+		Optional<Student>list=sr.findById(studentId);
+		if(list.isPresent()) {
+			Student p=list.get();
+			p.setFeesPaid(p.getFeesPaid()+feesPaid);
+			sr.save(p);
+			return sr.findAll();
+		}else 
+			return null;
+		
+	}
+
+	@Override
+	public List<Student> changebatch(int studentId, String batchNumber) {
+		Optional<Student>list=sr.findById(studentId);
+		if(list.isPresent()) {
+			Student p=list.get();
+			p.setBatchNumber(batchNumber);
+			sr.save(p);
+			return sr.findAll();
+		}else 
+			return null;
 	}
 
 	

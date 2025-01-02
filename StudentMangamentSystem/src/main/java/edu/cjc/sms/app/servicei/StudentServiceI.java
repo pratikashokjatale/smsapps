@@ -10,5 +10,8 @@ public interface StudentServiceI {
 	List<Student> getAllStudents();
 	public List<Student> findAllByBatchNumber(String batchNumber);
 	List<Student> deletestudent(int studentId);
+	Student updateStu(int id);
+	List<Student> feespay(int studentId, float feesPaid);
+	List<Student> changebatch(int studentId, String batchNumber);
 
 }
