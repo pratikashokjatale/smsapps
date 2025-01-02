@@ -227,13 +227,14 @@ name="batchNumber">
 				</tbody>
 
 			</table>
-			<nav aria-label="...">
+			
+		<nav aria-label="...">
   <ul class="pagination pagination-lg">
-    <li class="page-item active" aria-current="page">
-      <span class="page-link">1</span>
+    <li class="page-item">
+      <a class="page-link" href="paging?pageNo=0" tabindex="-1">1</a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="paging?pageNo=1">2</a></li>
+    <li class="page-item"><a class="page-link" href="paging?pageNo=2">3</a></li>
   </ul>
 </nav>
 		</section>

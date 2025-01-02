@@ -13,5 +13,6 @@ public interface StudentServiceI {
 	Student updateStu(int id);
 	List<Student> feespay(int studentId, float feesPaid);
 	List<Student> changebatch(int studentId, String batchNumber);
+	public List<Student> paging(int pageNo, int pageSize);
 
 }
